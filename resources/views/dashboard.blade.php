@@ -13,4 +13,22 @@
         commodi esse itaque tenetur. Temporibus ducimus ea veniam quisquam rerum vitae? Animi quos laudantium quam?
     </div>
 </div>
+
+<button class="btn btn-primary" id="toggle-modal-1">Launch Modal</button>
+  <script>
+    $('#toggle-modal-1').fireModal({
+      title: 'My Modal',
+      body: 'Hello, dude!',
+      buttons: [
+        {
+          text: 'Close',
+          class: 'btn btn-secondary',
+          handler: function(current_modal) {
+          $.destroyModal(current_modal);
+          }
+        }
+      ]
+    });
+  </script>
+
 @endsection
